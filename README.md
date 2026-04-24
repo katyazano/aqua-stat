@@ -10,11 +10,26 @@ View your app in AI Studio: https://ai.studio/apps/1e3084c7-1ca2-47d7-9766-9bf56
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
+**Prerequisites:**  
+Node.js (v18 o superior) → https://nodejs.org
+Python (v3.10 o superior) → https://python.org
 
 
-1. Install dependencies:
+1. Terminal 1 - Backend:
+   `cd backend`
+   `pip install -r requirements.txt`
+   `python -m uvicorn main:app --host 0.0.0.0 --port 8000`
+   Esperar hasta ver:
+   Application startup complete.
+
+2. Terminal 2 - Frontend:
+   `cd frontend`
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
    `npm run dev`
+   Esperar hasta ver algo como:
+   Local: http://localhost:3000/
+
+3. Abrir en el navegador
+Ir a: http://localhost:3000
+
+(Si el puerto 3000 está ocupado, Vite mostrará otro número, por ejemplo 3001.)
