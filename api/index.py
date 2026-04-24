@@ -7,7 +7,7 @@ from model import WaterQualityModel
 
 load_dotenv()
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 CSV_PATH = BASE_DIR / "dataset_app_agua_jalisco.csv"
 
 app = FastAPI(title="AquaStat API", version="1.0.0")
