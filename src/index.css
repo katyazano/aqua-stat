@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --radius-3xl: 24px;
+  --radius-4xl: 32px;
+  --radius-5xl: 40px;
+  --color-sleek-blue: #2196F3;
+  --color-sleek-dark: #1A237E;
+  --color-sleek-bg: #E3F2FD;
+  --color-sleek-content: #1A237E;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-sleek-content antialiased bg-sleek-bg;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-[16px] border border-white/60 shadow-lg shadow-sleek-blue/10;
+  }
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-xl border border-white/20;
+  }
+  .sleek-gradient-bg {
+    @apply bg-linear-to-br from-[#E3F2FD] to-[#BBDEFB];
+  }
+  .wqi-gradient {
+    @apply bg-linear-to-b from-[#2196F3] to-[#1976D2];
+  }
+  .wqi-gradient-moderate {
+    @apply bg-linear-to-b from-[#FFD700] to-[#FBC02D] text-sleek-dark;
+  }
+  .wqi-gradient-critical {
+    @apply bg-linear-to-b from-[#FF4B4B] to-[#D32F2F] text-white;
+  }
+  .data-chip {
+    @apply bg-[#F5F9FF] border border-[#E3F2FD] rounded-2xl p-3;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}

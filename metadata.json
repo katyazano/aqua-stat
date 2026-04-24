@@ -1,0 +1,6 @@
+{
+  "name": "Aquastat MX",
+  "description": "Una plataforma de monitoreo de calidad del agua de alta fidelidad para ciudadanos mexicanos con una estética minimalista de glassmorphism.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
